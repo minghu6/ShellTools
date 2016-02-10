@@ -21,3 +21,5 @@ do
         ;;
     esac
 done
+
+echo $1

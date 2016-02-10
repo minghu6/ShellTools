@@ -37,8 +37,8 @@ then
     read path
     if [$path -eq '']
     then
-        cmd=`pwd`
-        path=".";
+
+        path=$(pwd);
         echo $path
     fi
 

@@ -9,7 +9,7 @@ pcpu_usage(){
 
     STEPS=$(($SESC/$UNIT_TIME))
 
-    echo Watching CPU usage...;
+    echo Watching CPU usage...(percent);
 
     for((i=0;i<STEPS;++i))
     do
@@ -35,6 +35,7 @@ END{
 }
 
 help(){
+    echo 'require root'
     echo '    -h for help'
     echo '    -t for total listen time(second)'
     echo '    -p for interval time for listening process(second)'
