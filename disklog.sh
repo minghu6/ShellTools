@@ -18,13 +18,14 @@ then
            "Device" "Capacity" "Used" "Free" "Percent" "Status" > $logfile
 fi
 
-IP_LIST="127.0.0.1 0.0.0.0"#remote ip list
+#remote ip list
+IP_LIST="127.0.0.1 0.0.0.0"
 
 (
-    for ip in $IP_LIST;
+    for IP in $IP_LIST;
     do
         #root username
-        ssh root@$ip 'df -H' | grep ^/dev/ > /tmp/$$.df
+        ssh root@$IP 'df -H' | grep ^/dev/ > /tmp/$$.df
 
         while read line;
         do
